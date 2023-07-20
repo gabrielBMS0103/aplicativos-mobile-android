@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         dadosPessoa += pessoa.getTelefoneContato();
         dadosPessoa +=" Curso desejado: ";
         dadosPessoa += pessoa.getCursoDesejado();
-        int parada = 0;
+
 
 
     }
