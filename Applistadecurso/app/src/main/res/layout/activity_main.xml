@@ -8,7 +8,7 @@
     tools:context=".view.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtTituloApp"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:text="@string/txt_titulo"
@@ -20,82 +20,76 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
 
-    <EditText
-        android:id="@+id/editprimeironome"
+    <EditText android:id="@+id/editPrimeiroNome"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/txt_hint_edit_primeiro_nome"
-        app:layout_constraintBottom_toTopOf="@+id/editsobrenome"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/editSobreNomeAluno"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloApp"
         tools:layout_editor_absoluteX="98dp" />
 
-    <EditText
-        android:id="@+id/editsobrenome"
+    <EditText android:id="@+id/editSobreNomeAluno"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="304dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/txt_hint_edit_Sobrenome"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloApp"
+        app:layout_constraintVertical_bias="0.669"
         tools:layout_editor_absoluteX="0dp" />
 
-    <EditText
-        android:id="@+id/editnomedocurso"
+    <EditText android:id="@+id/editNomeCurso"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/txt_hint_edit_Nome_do_Curso"
-        app:layout_constraintTop_toBottomOf="@+id/editsobrenome"
+        app:layout_constraintTop_toBottomOf="@+id/editSobreNomeAluno"
         tools:layout_editor_absoluteX="0dp" />
 
-    <EditText
-        android:id="@+id/edittelefonedecontato"
+    <EditText android:id="@+id/editTelefonedeContato"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/txt_hint_edit_Telefone_de_Contato"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editnomedocurso"
+        app:layout_constraintTop_toBottomOf="@+id/editNomeCurso"
         app:layout_constraintVertical_bias="0.08" />
 
-    <Button
-        android:id="@+id/button"
+    <Button android:id="@+id/btnLimpar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/Azul"
         android:text="@string/txt_buton_limpar"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
+        app:layout_constraintEnd_toStartOf="@+id/btnSalvar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittelefonedecontato"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefonedeContato"
         app:layout_constraintVertical_bias="0.022" />
 
-    <Button
-        android:id="@+id/button2"
+    <Button android:id="@+id/btnSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/Azul"
         android:text="@string/txt_buton_salvar"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittelefonedecontato"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefonedeContato"
         app:layout_constraintVertical_bias="0.113" />
 
-    <Button
-        android:id="@+id/button3"
+    <Button android:id="@+id/btnFinalizar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="96dp"
