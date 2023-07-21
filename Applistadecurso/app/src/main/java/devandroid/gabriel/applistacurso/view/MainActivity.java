@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import devandroid.gabriel.applistacurso.R;
 import devandroid.gabriel.applistacurso.model.Pessoa;
@@ -48,6 +50,40 @@ public class MainActivity extends AppCompatActivity {
         editSobreNomeAluno.setText(pessoa.getSobreNome());
         editNomeCurso.setText(pessoa.getCursoDesejado());
         editTelefonedeContato.setText(pessoa.getTelefoneContato());
+
+        buttonLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editPrimeiroNome.setText("");
+                editSobreNomeAluno.setText("");
+                editNomeCurso.setText("");
+                editTelefonedeContato.setText("");
+            }
+        });
+
+        buttonFinalizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "volte sempre", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
+        buttonSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pessoa.setPrimeiroNome(editPrimeiroNome.getText().toString());
+                pessoa.setSobreNome(editSobreNomeAluno.getText().toString());
+                pessoa.setCursoDesejado(editNomeCurso.getText().toString());
+                pessoa.setTelefoneContato(editTelefonedeContato.getText().toString());
+
+                Toast.makeText(MainActivity.this, "Salvo "+pessoa.toString(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+
 
 
 
