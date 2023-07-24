@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button buttonLimpar;
     Button buttonSalvar;
     Button buttonFinalizar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,27 +78,21 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setCursoDesejado(editNomeCurso.getText().toString());
                 pessoa.setTelefoneContato(editTelefonedeContato.getText().toString());
 
-                Toast.makeText(MainActivity.this, "Salvo "+pessoa.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Salvo " + pessoa.toString(), Toast.LENGTH_SHORT).show();
 
             }
         });
 
-
-
-
-
-
-        dadosPessoa ="Primeiro nome: ";
+        dadosPessoa = "Primeiro nome: ";
         dadosPessoa += pessoa.getPrimeiroNome();
-        dadosPessoa +=" sobrenome: ";
+        dadosPessoa += " sobrenome: ";
         dadosPessoa += pessoa.getSobreNome();
-        dadosPessoa +=" telefone de contato: ";
+        dadosPessoa += " telefone de contato: ";
         dadosPessoa += pessoa.getTelefoneContato();
-        dadosPessoa +=" Curso desejado: ";
+        dadosPessoa += " Curso desejado: ";
         dadosPessoa += pessoa.getCursoDesejado();
 
-        Log.i("POOAndroid",pessoa.toString());
-
+        Log.i("POOAndroid", pessoa.toString());
     }
 
 }
