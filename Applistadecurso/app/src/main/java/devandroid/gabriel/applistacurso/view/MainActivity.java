@@ -10,9 +10,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import devandroid.gabriel.applistacurso.R;
+import devandroid.gabriel.applistacurso.controller.PesoaControler;
 import devandroid.gabriel.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
+    PesoaControler controler;
     Pessoa pessoa;
     String dadosPessoa;
 
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        controler = new PesoaControler();
+        controler.toString();
         pessoa = new Pessoa();
         // Atribuir coteudo< dados, valores para Objeto
         //conforme o seu MODELO de TEMPLETE
@@ -59,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 editSobreNomeAluno.setText("");
                 editNomeCurso.setText("");
                 editTelefonedeContato.setText("");
+
+                controler.limpar(pessoa);
             }
         });
 
@@ -67,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "volte sempre", Toast.LENGTH_SHORT).show();
                 finish();
+
+                controler.finalizar(pessoa);
             }
         });
 
@@ -79,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setTelefoneContato(editTelefonedeContato.getText().toString());
 
                 Toast.makeText(MainActivity.this, "Salvo " + pessoa.toString(), Toast.LENGTH_SHORT).show();
+
+                controler.salvar(pessoa);
 
             }
         });

@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txtListaSpiner"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
@@ -20,7 +21,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
 
-    <EditText android:id="@+id/editPrimeiroNome"
+    <EditText
+        android:id="@+id/editPrimeiroNome"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:ems="10"
@@ -30,7 +32,8 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTituloApp"
         tools:layout_editor_absoluteX="98dp" />
 
-    <EditText android:id="@+id/editSobreNomeAluno"
+    <EditText
+        android:id="@+id/editSobreNomeAluno"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="304dp"
@@ -42,7 +45,8 @@
         app:layout_constraintVertical_bias="0.669"
         tools:layout_editor_absoluteX="0dp" />
 
-    <EditText android:id="@+id/editNomeCurso"
+    <EditText
+        android:id="@+id/editNomeCurso"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="28dp"
@@ -52,7 +56,8 @@
         app:layout_constraintTop_toBottomOf="@+id/editSobreNomeAluno"
         tools:layout_editor_absoluteX="0dp" />
 
-    <EditText android:id="@+id/editTelefonedeContato"
+    <EditText
+        android:id="@+id/editTelefonedeContato"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:ems="10"
@@ -63,7 +68,8 @@
         app:layout_constraintTop_toBottomOf="@+id/editNomeCurso"
         app:layout_constraintVertical_bias="0.08" />
 
-    <Button android:id="@+id/btnLimpar"
+    <Button
+        android:id="@+id/btnLimpar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -74,9 +80,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTelefonedeContato"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.596" />
 
-    <Button android:id="@+id/btnSalvar"
+    <Button
+        android:id="@+id/btnSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -87,9 +94,10 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTelefonedeContato"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintVertical_bias="0.592" />
 
-    <Button android:id="@+id/btnFinalizar"
+    <Button
+        android:id="@+id/btnFinalizar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="96dp"
@@ -98,5 +106,34 @@
         android:text="@string/txt_buton_finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="1dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefonedeContato"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="23dp"
+        android:scrollbarSize="4dp"
+        android:text="Selecione o Curso"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefonedeContato"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
