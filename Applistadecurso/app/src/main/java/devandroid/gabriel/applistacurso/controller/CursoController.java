@@ -36,7 +36,7 @@ public class CursoController {
         for (int i = 0; i < getListaDeCursos(). size(); i++) {
 
             Curso objeto = (Curso) getListaDeCursos().get(i);
-            dados.add(objeto.getNomeDoCursoDesejado();
+            dados.add(objeto.getNomeDoCursoDesejado());
             
         }
 
