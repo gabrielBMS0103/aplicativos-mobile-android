@@ -49,12 +49,12 @@
         android:id="@+id/editNomeCurso"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/txt_hint_edit_Nome_do_Curso"
         app:layout_constraintTop_toBottomOf="@+id/editSobreNomeAluno"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="-1dp" />
 
     <EditText
         android:id="@+id/editTelefonedeContato"
@@ -106,17 +106,6 @@
         android:text="@string/txt_buton_finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="1dp" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="377dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTelefonedeContato"
-        app:layout_constraintVertical_bias="0.32" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -135,5 +124,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTelefonedeContato"
         app:layout_constraintVertical_bias="0.0" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefonedeContato"
+        app:layout_constraintVertical_bias="0.32" />
+
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>

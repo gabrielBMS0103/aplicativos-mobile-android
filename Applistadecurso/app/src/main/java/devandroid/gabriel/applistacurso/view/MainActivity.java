@@ -9,13 +9,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.List;
+
 import devandroid.gabriel.applistacurso.R;
+import devandroid.gabriel.applistacurso.controller.CursoController;
 import devandroid.gabriel.applistacurso.controller.PesoaControler;
+import devandroid.gabriel.applistacurso.model.Curso;
 import devandroid.gabriel.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
+    CursoController CursoController;
     PesoaControler controler;
     Pessoa pessoa;
+    List<Curso> listaDeCursos;
     String dadosPessoa;
 
     EditText editPrimeiroNome;
@@ -32,15 +38,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         controler = new PesoaControler();
         controler.toString();
+
         pessoa = new Pessoa();
+
+        CursoController = new CursoController();
+        listaDeCursos = CursoController.getListaDeCursos();
+
+
         // Atribuir coteudo< dados, valores para Objeto
         //conforme o seu MODELO de TEMPLETE
-        pessoa.setPrimeiroNome("Gabriel");
-        pessoa.setSobreNome("Barbosa");
-        pessoa.setCursoDesejado("Android");
-        pessoa.setTelefoneContato("19-996687952");
+        // pessoa.setPrimeiroNome("Gabriel");
+        //pessoa.setSobreNome("Barbosa");
+        //pessoa.setCursoDesejado("Android");
+        // pessoa.setTelefoneContato("19-996687952");
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobreNomeAluno = findViewById(R.id.editSobreNomeAluno);
